@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     def create
         user = User.find_by(email: params[:email]) #params is passed from the form
         if user && user.authenticate(params[:password])
-            session[:user_id] = user.id
+            session[:user_id] = user.id #session value
             redirect_to root_url, notice: "Log in successful!"
         else
             flash.now.alert= "Invalid email or password"
