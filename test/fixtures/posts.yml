@@ -1,18 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-oned:
-  title: MyStringabc
-  body: MyText
-  url: MyString
-  type: 
-  user: onea
- 
+post1:
+  title: Title One
+  body: Body One
+  type: TextPost
+  user: user1
 
-twod:
-  title: MyString
-  body: MyText
-  url: MyString
-  type: 
-  user: twoa
+post2:
+  title: Title Two
+  url: http://i.imgur.com/Y7syDEa.jpg
+  type: ImagePost
+  user: user1
 
-
+post3:
+  title: Title Three
+  body: Body Three
+  type: TextPost
+  user: user2
+  
