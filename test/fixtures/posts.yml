@@ -1,15 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
+oned:
+  title: MyStringabc
   body: MyText
   url: MyString
   type: 
-  user: one
+  user: onea
+ 
 
-two:
+twod:
   title: MyString
   body: MyText
   url: MyString
   type: 
-  user: two
+  user: twoa
+
+

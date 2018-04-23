@@ -10,6 +10,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user 
 
+  def authenticate_user!
+    redirect_to login_path unless current_user
+  end
+
+
   # adding current_user method to make it available to all controllers/views
   
   #double pipe equals is an operator that assigns a value, 
