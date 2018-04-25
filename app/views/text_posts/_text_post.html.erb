@@ -3,6 +3,7 @@
         <h3 class = "card-title">
         <%= text_post.title %>
         </h3>
+        <%= time_ago_in_words(Time.now) %>
     </div>
 
 
@@ -11,5 +12,6 @@
    
 
             <%= text_post.body %>
+
         </div>
     </div>

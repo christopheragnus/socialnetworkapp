@@ -3,6 +3,11 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
+    def show
+      @user = User.find(params[:id])
+      @posts = @user.posts.order("created_at DESC")
+    end
+
     def create
         @user = User.new(user_params)
         if @user.save
@@ -14,12 +19,20 @@ class UsersController < ApplicationController
         end
     end
 
+    def follow
+      @user = User.find(params[:id])
+      if current_user.follow!(@user)
+        redirect_to @user, notice: "Follow successful!"
+      else
+        redirect_to @user, alert: "Error following."
+      end
+    end
+
     private
 
     def user_params
-        params.require(:user).permit(:name, :email, :password, 
-        :password_confirmation)
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
-        
+
 end

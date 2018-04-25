@@ -6,7 +6,7 @@ class PostTest < ActiveSupport::TestCase
   # end
 
   def setup
-    @post1 = posts(:post1)add
+    @post1 = posts(:post1)
     @post2 = posts(:post2)
   end
 
