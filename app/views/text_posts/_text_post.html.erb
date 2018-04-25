@@ -13,5 +13,12 @@
 
             <%= text_post.body %>
 
+            <% if text_post.user == current_user %>
+      <p>
+        <%= link_to 'Edit', edit_text_post_path(text_post),
+                    class: "btn btn-primary" %>
+      </p>
+        <% end %>
+
         </div>
     </div>
